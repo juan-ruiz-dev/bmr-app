@@ -11,10 +11,12 @@ app.get('/', function (req, res){
     res.sendFile(__dirname + '/index.html')
 });
 
+
 app.use(express.static((__dirname, 'public')));
 
- 
+
 app.post('/', function (req, res) {
+    
 height = req.body.height
 weight = req.body.weight
 age = req.body.age
@@ -31,7 +33,8 @@ BMR = 88.362 + (13.397 * weightInKg) + (4.799 * heightInCm) - (5.677 * age)
     BMR = 447.593 + (9.247 * weightInKg) + (3.098 * heightInCm) - (4.330 * age)
 }
 
-console.log(BMR)
+
+res.sendFile(__dirname + '/success.html')
 
 })
 
