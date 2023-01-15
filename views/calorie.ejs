@@ -11,14 +11,14 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="">Food and Calorie Count</span>
         </div>
-        <input type="text" class="form-control" placeholder = "What'd ya eat?">
+        <input type="text" class="form-control" placeholder = "What'd ya eat?" name = "food">
         <input type="text" class="form-control" placeholder = "How many calories?" name = "calorie" value="">
         <button class = "btn btn-sm btn-dark calorie-submit" type = "submit">Submit!</button>
     </div>
-    <p>Your remaining calories are <%=updatedCalories  %> </p>
-    </div>
+</div>
 
 </form>
 
+<p>Your remaining calories are <%= updatedCalories %> </p>
 </body>
 </html>

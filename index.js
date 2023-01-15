@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'ejs');
 let bmr = null;
 let calories = null;
-
+let updatedCalories = null;
 
 
 
@@ -64,18 +64,22 @@ if(exercise == "1"){
 }else if(exercise == "5"){
     let light = bmr * .54
     bmr = bmr + light
-}else {
-   
 }
+
+
+
 // percent differences based on exercise 
 //1 = 18%
 //2 = 31%
 //3 37%
 //4 43%
 //5 54%
-res.redirect("/")
-
+res.redirect("/calorie")
+    // let calories = req.body.calorie
+    // console.log(bmr, calories)
+    // let updatedCalories = bmr - calories 
 })
+
 
 
 app.get ("/calorie", function(req, res){
@@ -89,22 +93,20 @@ app.get ("/calorie", function(req, res){
 }
 let day = today.toLocaleDateString("en-US", options)    
 
-    res.render("calorie", {updatedCalories: calories, currentDay: day, bmr: bmr})
+    res.render("calorie", {calories: calories, currentDay: day, bmr: bmr, updatedCalories: updatedCalories})
 
 })
-
 
 app.post('/calorie', function (req, res){
-
     let calories = req.body.calorie
+    let food = req.body.food
+    updatedCalories = Math.ceil(bmr - calories);
+    
+console.log(updatedCalories)
+    res.redirect("/calorie")
     
     
-    
-
-
-res.redirect('/calorie')
 })
-
 
 
 
