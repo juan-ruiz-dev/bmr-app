@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'ejs');
 let bmr = null;
+let calories = null;
 
 
 
@@ -75,6 +76,38 @@ if(exercise == "1"){
 res.redirect("/")
 
 })
+
+
+app.get ("/calorie", function(req, res){
+
+    let today = new Date();
+    var options = 
+{ 
+    weekday: 'long', 
+    day: 'numeric', 
+    month: 'long'
+}
+let day = today.toLocaleDateString("en-US", options)    
+
+    res.render("calorie", {updatedCalories: calories, currentDay: day, bmr: bmr})
+
+})
+
+
+app.post('/calorie', function (req, res){
+
+    let calories = req.body.calorie
+    
+    
+    
+
+
+res.redirect('/calorie')
+})
+
+
+
+
 
 
 
