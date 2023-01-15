@@ -6,12 +6,26 @@ body {
 .form-group {
     padding: 10px;
     margin: 0 auto;
-    border: 5px solid black; 
-    border-radius: 10%;
+    
 }
 
-
+h1 {
+    text-align: center;
+}
 
 h2 {
     text-align: center;
 }
+
+p{
+    text-align: center;
+}
+
+button {
+    margin-top: 5px;
+}
+
+select {
+margin: 5px;
+}
+
