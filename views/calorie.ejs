@@ -4,6 +4,21 @@
 
 
 
+
+
+
+
+
+    <div class = "box">
+        <% for(let i = 0; i < newFoodItem.length; i++){ %>
+            <% for(let i = 0; i < newCalorieItem.length; i++){ %>
+                
+   <%}%>
+   <p> <%= [newFoodItem[i] + " " + newCalorieItem[i]] %>  </p>
+   <%}%>
+           </div>    
+
+
 <section class = "calorie-counter">
 <div class="container h-100 d-flex justify-content-center">
 <form action="/calorie" method = "post">
@@ -18,6 +33,13 @@
 </div>
 
 </form>
+
+
+
+
+
+
+
 
 <p>Your remaining calories are <%= updatedCalories %> </p>
 </body>

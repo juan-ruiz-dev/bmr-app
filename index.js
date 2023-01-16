@@ -9,7 +9,8 @@ app.set('view engine', 'ejs');
 let bmr = null;
 let calories = null;
 let updatedCalories = null;
-
+let calArr = [];
+let foodArr = [];
 
 
 
@@ -93,18 +94,28 @@ app.get ("/calorie", function(req, res){
 }
 let day = today.toLocaleDateString("en-US", options)    
 
-    res.render("calorie", {calories: calories, currentDay: day, bmr: bmr, updatedCalories: updatedCalories})
+    res.render("calorie", {calories: calories, currentDay: day, bmr: bmr, updatedCalories: updatedCalories, newFoodItem: foodArr, newCalorieItem: calArr})
 
 })
 
 app.post('/calorie', function (req, res){
     let calories = req.body.calorie
     let food = req.body.food
+
+foodArr.push(food)
+calArr.push(calories)
+console.log(foodArr, calArr)
+
+
     updatedCalories = Math.ceil(bmr - calories);
+
     
 console.log(updatedCalories)
     res.redirect("/calorie")
     
+
+
+
     
 })
 
