@@ -120,7 +120,8 @@ console.log(updatedCalories)
 })
 
 app.get('/login', (req, res) => {
-    res.redirect('/')
+    res.render('login')
+    
 
 })
 
@@ -148,6 +149,15 @@ res.redirect('login')
 
 })
 
+
+app.post('/login', (req, res) => {
+let logInDetails = {
+    user: req.body.signinuser,
+    pw: req.body.signinpw
+}
+console.log(logInDetails)
+res.redirect('/')
+})
 
 
 
