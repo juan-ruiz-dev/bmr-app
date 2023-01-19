@@ -120,7 +120,8 @@ console.log(updatedCalories)
 })
 
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.redirect('/')
+
 })
 
 
@@ -131,10 +132,7 @@ app.get('/register', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
- name = req.body.username
- email = req.body.email
-    password = req.body.password
- password2 = req.body.passw
+
 let user = { 
     name: req.body.username,
     email: req.body.email,
