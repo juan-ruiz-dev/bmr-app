@@ -23,6 +23,7 @@ h2 {
 
 p{
     text-align: center;
+    color: #015871
 }
 
 button {
@@ -107,3 +108,10 @@ margin: 5px;
     }
   }
 
+.login-btn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    color: white;
+    border:none;
+  }
