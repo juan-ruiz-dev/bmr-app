@@ -30,7 +30,7 @@ res.render('index', {currentDay: day, bmr: bmr});
 
 });
 
-app.use(express.static(('public')));
+app.use(express.static((__dirname, 'public')));
 
 
 
@@ -119,7 +119,9 @@ console.log(updatedCalories)
     
 })
 
-
+app.get('/login', (req, res) => {
+    res.render('login')
+})
 
 
 
