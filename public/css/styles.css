@@ -41,11 +41,12 @@ margin: 5px;
 
 
 .box {
-    max-width: 800px;
+    max-width: 400px;
     margin: 50px auto;
-    background: white;
+    background: rgba(255,254,234,1) 35%;
     border-radius: 5px;
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    border-bottom:rgba(0, 0, 0, 0.3)
   }
 
 .navbar-brand{
@@ -115,3 +116,14 @@ margin: 5px;
     color: white;
     border:none;
   }
+
+  .containerbox {
+    max-width: 550px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+.fooditems {
+  
+}
