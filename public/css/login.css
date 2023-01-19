@@ -46,3 +46,38 @@ body {
     transform: translate3d(0,5px,0);
   }
 }
+
+.div-center {
+  width: 400px;
+  height: 400px;
+ 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+ 
+  display: table;
+}
+
+.btn-primary {
+  background: #015871
+}
+
+#tab-login{ 
+  background: #015871
+
+}
+
+#tab-register {
+  color: #015871
+}
+
+#forgot {
+  color: #015871
+}
